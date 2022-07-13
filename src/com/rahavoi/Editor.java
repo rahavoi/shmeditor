@@ -55,6 +55,9 @@ public class Editor {
                         break;
                     case 'u':
                         command = new Undo(n);
+                        break;
+                    default:
+                        throw new IllegalArgumentException("Unsupported command: " + c);
                 }
                 commands.add(command);
                 times = new StringBuilder();
