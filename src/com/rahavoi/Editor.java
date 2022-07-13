@@ -26,7 +26,7 @@ public class Editor {
             if(Character.isDigit(c)){
                 times.append(c);
             } else {
-                Command command = null;
+                Command command;
                 int n = times.length() == 0 ? 1 : toInt(times.toString()) < 0 ?
                         Integer.MAX_VALUE: toInt(times.toString());
 
@@ -62,7 +62,7 @@ public class Editor {
     }
 
     private int toInt(String input){
-        return new BigInteger(input.toString()).intValue();
+        return new BigInteger(input).intValue();
     }
 
     //TODO: Creating a new state for each command is not very efficient when there are many states
