@@ -11,9 +11,9 @@ public class Editor {
     private Stack<EditorState> states = new Stack<>();
 
     public Editor(String text, String input) {
+        states.push(new EditorState(0, text));
         this.text = text;
         this.init(input);
-        states.push(new EditorState(0, text));
     }
 
     private void init(String input){
